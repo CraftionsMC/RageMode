@@ -27,5 +27,6 @@ public class Util {
         inv.setItem(0, bow);
         inv.setItem(1, sword);
         inv.setItem(9, arrow);
+        p.getInventory().setContents(inv.getContents());
     }
 }

@@ -14,6 +14,7 @@ public class EventPlayerJoin implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
+        e.setJoinMessage(RageMode.prefix + "§c" + e.getPlayer().getName() + " §7joined the game");
         if(RageMode.config.get("spawn") != null){
             e.getPlayer().teleport((Location) RageMode.config.get("spawn"));
         }else {

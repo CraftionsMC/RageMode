@@ -2,10 +2,7 @@ package net.craftions.ragemode;
 
 import net.craftions.ragemode.commands.CommandSetSpawn;
 import net.craftions.ragemode.config.Config;
-import net.craftions.ragemode.events.EventPlayerDeath;
-import net.craftions.ragemode.events.EventPlayerJoin;
-import net.craftions.ragemode.events.EventPlayerQuit;
-import net.craftions.ragemode.events.EventPlayerRespawn;
+import net.craftions.ragemode.events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -25,6 +22,10 @@ public final class RageMode extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new EventPlayerDeath(), this);
         Bukkit.getPluginManager().registerEvents(new EventPlayerRespawn(), this);
         Bukkit.getPluginManager().registerEvents(new EventPlayerQuit(), this);
+        Bukkit.getPluginManager().registerEvents(new EventBlockPlace(), this);
+        Bukkit.getPluginManager().registerEvents(new EventBlockBreak(), this);
+        Bukkit.getPluginManager().registerEvents(new EventPlayerItemDrop(), this);
+        Bukkit.getPluginManager().registerEvents(new EventInventoryClick(), this);
 
         instance = this;
         File rootDir = new File("plugins/RageMode");

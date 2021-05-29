@@ -26,6 +26,8 @@ public final class RageMode extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new EventBlockBreak(), this);
         Bukkit.getPluginManager().registerEvents(new EventPlayerItemDrop(), this);
         Bukkit.getPluginManager().registerEvents(new EventInventoryClick(), this);
+        Bukkit.getPluginManager().registerEvents(new EventProjectileHit(), this);
+
 
         instance = this;
         File rootDir = new File("plugins/RageMode");

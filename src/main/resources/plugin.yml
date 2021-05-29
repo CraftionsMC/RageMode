@@ -2,3 +2,7 @@ name: RageMode
 version: ${project.version}
 main: net.craftions.ragemode.RageMode
 api-version: 1.16
+commands:
+  setspawn:
+    usage: /setspawn
+    permission: craftions.ragemode.command.setspawn

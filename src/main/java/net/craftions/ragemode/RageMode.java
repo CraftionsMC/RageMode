@@ -1,5 +1,6 @@
 package net.craftions.ragemode;
 
+import net.craftions.ragemode.commands.CommandSetSpawn;
 import net.craftions.ragemode.config.Config;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -9,10 +10,12 @@ import java.io.IOException;
 public final class RageMode extends JavaPlugin {
 
     public static Config config = null;
+    public static String prefix = "§7[§cRageMode§7] ";
     protected static RageMode instance;
 
     @Override
     public void onEnable() {
+        getCommand("setspawn").setExecutor(new CommandSetSpawn());
         instance = this;
         File rootDir = new File("plugins/RageMode");
         if(!rootDir.exists()){

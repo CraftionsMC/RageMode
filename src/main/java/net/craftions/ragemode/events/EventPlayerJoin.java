@@ -10,6 +10,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
+import static net.craftions.ragemode.util.Util.resetPlayerInventory;
+
 public class EventPlayerJoin implements Listener {
 
     @EventHandler
@@ -20,5 +22,6 @@ public class EventPlayerJoin implements Listener {
         }else {
             e.getPlayer().sendMessage(RageMode.prefix + "The spawn was §cnot §7set. Set it using §c/setspawn");
         }
+        resetPlayerInventory(e.getPlayer());
     }
 }
